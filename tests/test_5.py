@@ -10,11 +10,7 @@ from pydata.my_cache import MyCache
 
 @pytest.fixture(scope="function")
 def redis_client() -> Generator[redis.Redis, Any, None]:
-    with RedisContainer(
-        image="redis:latest",
-        port=6379,
-        password="noneofyourbusiness",
-    ) as redis_container:
+    with RedisContainer() as redis_container:
         # Additional setup goes here
         yield redis_container.get_client()
 

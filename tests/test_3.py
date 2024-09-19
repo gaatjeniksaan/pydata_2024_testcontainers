@@ -10,14 +10,15 @@ def multiply(a: int, b: int) -> int:
 
 @pytest.fixture
 def sample_data() -> Generator[tuple[int], Any, None]:
-    print("\n\nRUNNING BEFORE TEST! <-- setup goes here")
-    yield (2, 5)
-    print("\nRUNNING AFTER TEST! <-- cleanup goes here")
+    # print("\n\nRUNNING BEFORE TEST! <-- setup goes here")
+    # yield (2, 5)
+    return (2, 5)
+    # print("\nRUNNING AFTER TEST! <-- cleanup goes here")
 
 
-def test_multiply(sample_data):  # sample_data == (2, 6)
-    a, b = sample_data
+def test_multiply(sample_data):
+    a, b = sample_data  # a=2, b=5
 
     result = multiply(a, b)
-    print("\nASSERTING!")
+    # print("\nASSERTING!")
     assert result == 10

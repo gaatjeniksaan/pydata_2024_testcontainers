@@ -6,7 +6,6 @@ from pydata.my_cache import MyCache
 def test_write_to_cache_single_no_fixture() -> None:
     c = RedisContainer()
     c.start()
-
     redis_client = c.get_client()
 
     w = MyCache(redis_client=redis_client)
@@ -15,3 +14,4 @@ def test_write_to_cache_single_no_fixture() -> None:
     w.write(key=key, value=value)
 
     assert w.get(key) == value
+    c.stop()
