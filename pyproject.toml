@@ -1,0 +1,17 @@
+[project]
+name = "pydata-2024-testcontainers"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "minio>=7.2.8",
+    "redis>=5.0.8",
+    "testcontainers>=4.8.1",
+]
+
+[tool.uv]
+dev-dependencies = [
+    "pytest-xdist>=3.6.1",
+    "pytest>=8.3.3",
+]
