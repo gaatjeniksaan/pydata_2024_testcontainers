@@ -3,7 +3,7 @@ from pydata.my_cache import MyCache
 
 
 def test_write_to_cache_with_mock() -> None:
-    key = "PyData2024"
+    key = "Data Rocks 8"
     value = b"Love you!"
 
     mock_redis = mock.Mock()

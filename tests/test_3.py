@@ -20,5 +20,5 @@ def test_multiply(sample_data):
     a, b = sample_data  # a=2, b=5
 
     result = multiply(a, b)
-    # print("\nASSERTING!")
+    print("\nASSERTING!")
     assert result == 10

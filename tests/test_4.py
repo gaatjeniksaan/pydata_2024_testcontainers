@@ -9,8 +9,8 @@ def test_write_to_cache_single_no_fixture() -> None:
     redis_client = c.get_client()
 
     w = MyCache(redis_client=redis_client)
-    key = "PyData2024"
-    value = b"Amsterdam baby!!"
+    key = "Data Rocks 8"
+    value = b"Den Bosch baby!!"
     w.write(key=key, value=value)
 
     assert w.get(key) == value

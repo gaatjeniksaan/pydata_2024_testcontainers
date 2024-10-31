@@ -1,3 +1,4 @@
+import typing
 import redis
 
 
@@ -10,5 +11,5 @@ class MyCache:
     def write(self, key: str, value: bytes | str) -> None:
         self.redis_client.set(key, value)
 
-    def get(self, key: str) -> bytes | None:
+    def get(self, key: str) -> typing.Any:
         return self.redis_client.get(key)
